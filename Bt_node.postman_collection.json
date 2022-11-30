@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "81cc45cd-1ed3-4ae9-a37d-288ce993cc85",
+		"name": "Bt_node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Lấy danh sách like theo nhà hàng và user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/food/getLike",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"getLike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách user like nhà hàng",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/food/getUserlike",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"getUserlike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách nhà hàng được like",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/food/getResLike",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"getResLike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Xử lí like và unlike",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"13\",\r\n    \"res_id\":\"5\",\r\n    \"date_like\":\"2022-11-11 09:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/createLikeUnlike",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"createLikeUnlike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Xử lý đánh giá nhà hàng",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"1\",\r\n    \"res_id\":\"5\",\r\n    \"amount\":\"10\",\r\n    \"date_rate\":\"2022-11-26\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/addRate",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"addRate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách đánh giá theo User",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Lấy danh sách đánh giá theo nhà hàng",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Xử lí thêm order",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "http://localhost:8080/api",
+			"type": "default"
+		}
+	]
+}
